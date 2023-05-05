@@ -1,6 +1,7 @@
 .card-collection{
-
+    max-width: 1300px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 1em;
 }

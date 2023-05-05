@@ -18,7 +18,6 @@ function App() {
     };
     fetchMyStoreData();
   }, []);
-  console.log(myStoreData);
   return (
     <div className="App">
       <header>
@@ -35,7 +34,7 @@ function App() {
       </header>
       <main>
         <div className="main__search">
-          <SearchInput/>
+          <SearchInput setInputValue = {setInputValue}/>
         </div>
         <CardCollection myStoreData={myStoreData} />
       </main>
