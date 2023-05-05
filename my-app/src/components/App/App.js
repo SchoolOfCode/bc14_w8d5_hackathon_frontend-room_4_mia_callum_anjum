@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <header>
         <div className="App_heading">
-        <h1>Gorilla Store</h1>
+        <h1>GorillE-Store</h1>
 
         <img src="https://t4.ftcdn.net/jpg/05/65/55/03/360_F_565550367_1dT0Pc6mghKERU7utRfm7IbwaTilDgOB.jpg" alt="Gorilla"/>
         </div>
