@@ -1,11 +1,17 @@
 import Card from "./Card";
 import "./CardCollection.css";
 
-function CardCollection({ myStoreData }) {
+function CardCollection({ myStoreData, setFilteredStoreData, inputValue }) {
+
+    const filteredData = myStoreData && myStoreData.filter(item => // if myStoreData is truthy, then filter it:
+    item.title.toLowerCase().includes(inputValue.toLowerCase())
+  );
+
+
   return (
     <div className="card-collection">
-      {myStoreData && // if myStoreData is truthy, then render the following:
-        myStoreData.map((item) => {
+      {filteredData && // if myStoreData is truthy, then render the following:
+        filteredData.map((item) => {
           return ( 
             <Card 
               key={item.id}

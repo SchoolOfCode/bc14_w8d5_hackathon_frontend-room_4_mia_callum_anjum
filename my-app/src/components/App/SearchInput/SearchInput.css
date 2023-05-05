@@ -1,0 +1,15 @@
+.search{
+    display: flex;
+}
+.search__input{
+    border: 5px solid #6a555f;
+    height: 1.5em;
+    text-align: center;
+    letter-spacing: .1em;
+    font-weight: 600;
+}
+.search__input-icon{
+    background-color: #6a555f;
+    height: 98.5%;
+    color: #ffffff;
+}

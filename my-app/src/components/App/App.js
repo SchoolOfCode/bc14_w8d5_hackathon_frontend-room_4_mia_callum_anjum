@@ -10,6 +10,9 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 function App() {
   const [myStoreData, setMyStoreData] = useState(null);
   const [inputValue, setInputValue] = useState("");
+  const [filteredStoreData, setFilteredStoreData] = useState(null);
+
+
 
   useEffect(() => {
     const fetchMyStoreData = async () => {
@@ -18,6 +21,12 @@ function App() {
     };
     fetchMyStoreData();
   }, []);
+
+  function handleResetClick() {
+    setInputValue("");
+  }
+
+
   return (
     <div className="App">
       <header>
@@ -34,9 +43,9 @@ function App() {
       </header>
       <main>
         <div className="main__search">
-          <SearchInput setInputValue = {setInputValue}/>
+          <SearchInput inputValue={inputValue} setInputValue = {setInputValue} handleResetClick={handleResetClick}/>
         </div>
-        <CardCollection myStoreData={myStoreData} />
+        <CardCollection myStoreData={myStoreData} setFilteredStoreData={setFilteredStoreData} inputValue={inputValue} />
       </main>
     </div>
   );
